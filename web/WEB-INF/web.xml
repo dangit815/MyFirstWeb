@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <context-param> <param-name>kmRootKey</param-name> <param-value>km.root</param-value> </context-param>
+    <!--创建一个Servlet实例-->
+    <servlet>
+        <servlet-name>servletDemo1</servlet-name>
+        <servlet-class>com.itheima.servlet.ServletDemo1</servlet-class>
+        <!--使当前Servlet在服务器启动时创建，数值越小优先级越高，正整数-->
+        <!-- <load-on-startup>2</load-on-startup> -->
+    </servlet>
+
+    <!--给Servlet提供（映射）一个可供客户端访问的URI-->
+    <servlet-mapping>
+        <servlet-name>servletDemo1</servlet-name>
+        <url-pattern>/demo1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>servletDemo2</servlet-name>
+        <servlet-class>com.itheima.servlet.ServletDemo2</servlet-class>
+        <!--使当前Servlet在服务器启动时创建，数值越小优先级越高，正整数-->
+        <!-- <load-on-startup>2</load-on-startup> -->
+    </servlet>
+
+    <!--给Servlet提供（映射）一个可供客户端访问的URI-->
+    <servlet-mapping>
+        <servlet-name>servletDemo2</servlet-name>
+        <url-pattern>/demo2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>servletDemo3</servlet-name>
+        <servlet-class>com.itheima.servlet.ServletDemo3</servlet-class>
+        <!--使当前Servlet在服务器启动时创建，数值越小优先级越高，正整数-->
+        <!-- <load-on-startup>2</load-on-startup> -->
+    </servlet>
+
+    <!--给Servlet提供（映射）一个可供客户端访问的URI-->
+    <servlet-mapping>
+        <servlet-name>servletDemo3</servlet-name>
+        <url-pattern>/demo3</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>encoding</param-name>
+        <param-value>UTF-8</param-value>
+    </context-param>
+</web-app>
